@@ -70,24 +70,24 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '5.2.4.2'
+  gem 'actionpack-action_caching', '1.2.0'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
 end
-gem 'rails-observers'
+gem 'rails-observers', '>= 0.1.2'
 
 #gem 'redis-rails'
 gem 'hiredis'
 gem 'redis', require:  ["redis", "redis/connection/hiredis"]
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.8.1'
 
 
 gem 'onebox'
 
-gem 'ember-rails'
+gem 'ember-rails', '>= 0.14.1'
 gem 'ember-source', '1.6.0.beta.2'
 gem 'handlebars-source', '1.3.0'
 gem 'barber'
@@ -139,7 +139,7 @@ gem 'rest-client'
 gem 'rinku'
 gem 'sanitize'
 gem 'sass'
-gem 'sidekiq'
+gem 'sidekiq', '>= 3.0.0'
 
 gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
@@ -153,8 +153,8 @@ gem 'rack-protection' # security
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails', '~> 4.0.2'
-  gem 'uglifier'
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'uglifier', '>= 2.4.0'
 end
 
 group :test do
@@ -167,25 +167,25 @@ group :test, :development do
   gem 'listen', '0.7.3', require: false
   gem 'certified', require: false
   gem 'fabrication', require: false
-  gem 'qunit-rails'
+  gem 'qunit-rails', '>= 0.0.7'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
+  gem 'rspec-rails', '>= 2.14.1', require: false
+  gem 'shoulda', '>= 3.5.0', require: false
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'rspec-given'
   gem 'pry-rails'
   gem 'pry-nav'
-  gem 'spork-rails'
+  gem 'spork-rails', '>= 4.0.0'
 end
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
-  gem 'annotate'
+  gem 'annotate', '>= 2.6.1'
   gem 'foreman', require: false
 end
 
