@@ -101,7 +101,7 @@ gem 'eventmachine'
 gem 'fast_xs'
 
 gem 'fast_xor'
-gem 'fastimage'
+gem 'fastimage', '>= 1.6.0'
 gem 'fog', '1.18.0', require: false
 gem 'unf', require: false
 
