@@ -92,7 +92,7 @@ gem 'ember-source', '1.6.0.beta.2'
 gem 'handlebars-source', '1.3.0'
 gem 'barber'
 
-gem 'message_bus'
+gem 'message_bus', '>= 3.3.7'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
 gem 'redcarpet', require: false
