@@ -141,7 +141,7 @@ gem 'sanitize'
 gem 'sass'
 gem 'sidekiq'
 
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 4.1.0', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
