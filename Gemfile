@@ -102,7 +102,7 @@ gem 'fast_xs'
 
 gem 'fast_xor'
 gem 'fastimage'
-gem 'fog', '1.18.0', require: false
+gem 'fog', '1.37.0', require: false
 gem 'unf', require: false
 
 # see: https://twitter.com/samsaffron/status/412360162297393152
@@ -121,7 +121,7 @@ gem 'image_optim', '0.9.1'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.18.4'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
