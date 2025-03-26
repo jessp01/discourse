@@ -70,7 +70,7 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
+  gem 'rails', '>= 7.0.0', '>= 7.0.0', git: 'https://github.com/rails/rails.git'
   gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
@@ -153,7 +153,7 @@ gem 'rack-protection' # security
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails', '~> 4.0.2'
+  gem 'sass-rails', '~> 6.0.0'
   gem 'uglifier'
 end
 
@@ -210,8 +210,8 @@ gem 'rack-mini-profiler', require: false
 
 # used for caching, optional
 gem 'rack-cors', require: false
-gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'unicorn', '>= 5.1.0', require: false
+gem 'puma', '>= 2.12.0', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
