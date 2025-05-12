@@ -141,13 +141,13 @@ gem 'sanitize'
 gem 'sass'
 gem 'sidekiq'
 
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 4.0.0', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
 gem 'thin', require: false
 gem 'highline', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 4.0.0' # security
 
 # Gems used only for assets and not required
 # in production environments by default.
