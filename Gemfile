@@ -70,29 +70,29 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', '>= 7.0.0', '>= 7.0.0', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 7.1.0', '>= 7.1.0', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.1', '>= 1.2.1', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
 end
-gem 'rails-observers'
+gem 'rails-observers', '>= 0.1.4'
 
 #gem 'redis-rails'
 gem 'hiredis'
 gem 'redis', require:  ["redis", "redis/connection/hiredis"]
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.8.2'
 
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
-gem 'ember-rails'
+gem 'ember-rails', '>= 0.15.0'
 gem 'ember-source', '1.6.0.beta.2'
 gem 'handlebars-source', '1.3.0'
-gem 'barber'
+gem 'barber', '>= 0.5.0'
 
-gem 'message_bus'
+gem 'message_bus', '>= 0.9.5'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
 gem 'redcarpet', require: false
@@ -122,13 +122,13 @@ gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri', '>= 1.18.4'
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'omniauth', '>= 2.1.0'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-facebook', '>= 2.0.0'
+gem 'omniauth-twitter', '>= 1.1.0'
+gem 'omniauth-github', '>= 2.0.0'
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
@@ -137,23 +137,23 @@ gem 'rake'
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 2.1.1'
 gem 'sass'
 gem 'sidekiq'
 
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 2.0.0', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
-gem 'thin', require: false
+gem 'thin', '>= 1.6.2', require: false
 gem 'highline', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 1.5.3' # security
 
 # Gems used only for assets and not required
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails', '~> 6.0.0'
+  gem 'sass-rails', '~> 4.0.3'
   gem 'uglifier'
 end
 
@@ -170,9 +170,9 @@ group :test, :development do
   gem 'qunit-rails'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
-  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
+  gem 'rb-inotify', '~> 0.9', '>= 0.9.4', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
+  gem 'rspec-rails', '>= 2.14.2', require: false
+  gem 'shoulda', '>= 3.6.0', require: false
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'rspec-given'
@@ -185,8 +185,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
-  gem 'annotate'
-  gem 'foreman', require: false
+  gem 'annotate', '>= 2.6.2'
+  gem 'foreman', '>= 0.64.0', require: false
 end
 
 # Gem that enables support for plugins. It is required.
@@ -206,17 +206,17 @@ gem 'lru_redux'
 #  we are open to it. by deferring require to the initializer we can configure discourse installs without it
 
 gem 'flamegraph', require: false
-gem 'rack-mini-profiler', require: false
+gem 'rack-mini-profiler', '>= 0.9.2', require: false
 
 # used for caching, optional
 gem 'rack-cors', require: false
 gem 'unicorn', '>= 5.1.0', require: false
 gem 'puma', '>= 2.12.0', require: false
-gem 'rbtrace', require: false, platform: :mri
+gem 'rbtrace', '>= 0.4.4', require: false, platform: :mri
 
 # required for feed importing and embedding
 #
-gem 'ruby-readability', require: false
+gem 'ruby-readability', '>= 0.6.2', require: false
 
 gem 'simple-rss', require: false
 gem 'gctools', require: false, platform: :mri_21
