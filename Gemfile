@@ -70,7 +70,7 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', '>= 7.0.0', '>= 7.0.0', git: 'https://github.com/rails/rails.git'
+  gem 'rails', '>= 7.1.5.2', '>= 7.1.5.2', git: 'https://github.com/rails/rails.git'
   gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
@@ -185,7 +185,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
-  gem 'annotate'
+  gem 'annotate', '>= 2.6.2'
   gem 'foreman', require: false
 end
 
