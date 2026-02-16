@@ -125,10 +125,10 @@ gem 'nokogiri', '>= 1.18.4'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 2.0.0'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-github', '>= 1.1.2'
+gem 'omniauth-oauth2', '>= 1.3.0', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
